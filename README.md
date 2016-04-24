@@ -1,2 +1,2 @@
 # EmergencyShouter
-Simple cordova schoole project for extreme situations.
+Simple cordova school project for extreme situations.
