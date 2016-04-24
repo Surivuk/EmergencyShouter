@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+ 
+    <title>Emergency Shouter</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="jumbotron">
+			<div class="circles" id="content">
+				<canvas class="circles" id="drawingBoard"><div>Test</div></canvas>
+            </div>
+	</div>
+            
+	<div class="jumbotron">
+		<button id="clear">Clear</button>
+		<button id="rotate">Rotate</button>
+		<button id="startRot">Start Rotatio</button>
+		<button id="stop">Stop Rotatio</button>
+	</div>
+	
+    <script type="text/javascript" src="js/jquery/jquery-1.11.1.min.js"></script>
+    
+</body>
+<style>
+#content{
+	background-color:azure;
+	border:3px solid black;
+}
+.circles{
+	
+	width:200px;
+	height:200px;
+	border-radius:200px;
+}
+</style>
+<script>
+var intervalID = {};
+var canvas = document.getElementById('drawingBoard');
+var ctx = canvas.getContext('2d');
+ctx.fillStyle = "#000000";
+ctx.moveTo(150,150);
+
+ctx.lineTo(150,0);
+ctx.stroke();
+
+
+ctx.stroke();
+
+
+
+	function rotate(stepeni){
+		$("#content").css({
+    "webkitTransform":"rotate("+stepeni+"deg)",
+    "MozTransform":"rotate("+stepeni+"deg)",
+    "msTransform":"rotate("+stepeni+"deg)",
+    "OTransform":"rotate("+stepeni+"deg)",
+    "transform":"rotate("+stepeni+"deg)"
+	});
+	}
+	var deg = 0;
+	$("#clear").click(function(){
+		$("#content").css({
+    "webkitTransform":"",
+    "MozTransform":"",
+    "msTransform":"",
+    "OTransform":"",
+    "transform":""
+});
+	});
+	
+	
+	$("#rotate").click(function(){
+		deg += 15;
+		$("#content").css({
+    "webkitTransform":"rotate("+deg+"deg)",
+    "MozTransform":"rotate("+deg+"deg)",
+    "msTransform":"rotate("+deg+"deg)",
+    "OTransform":"rotate("+deg+"deg)",
+    "transform":"rotate("+deg+"deg)"
+});
+	});
+	
+	$("#startRot").click(function(){
+		
+		intervalID = setInterval(function(){ rotate(deg);deg+=0.5; }, 10);
+	});
+	$("#stop").click(function(){
+		clearInterval(intervalID);
+	});
+</script>
+</html>

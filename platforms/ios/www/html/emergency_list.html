@@ -1,0 +1,55 @@
+<div class="container">
+    <br>
+    <div class="emergencyType">
+        <p class="value">Fire</p>
+    </div>
+    <br>
+    <div class="emergencyType">
+        <p class="value">Flood</p>
+    </div>
+    <br>
+    <div class="emergencyType">
+        <p class="value">Earthquake</p>
+    </div>
+    <br>
+    <div class="emergencyType">
+        <p class="value">Volcano</p>
+    </div>
+    <br>
+    <div class="emergencyType">
+        <p class="value">Tornado</p>
+    </div>
+    <br>
+    <div class="emergencyType">
+        <p class="value">Other</p>
+    </div>
+</div>
+<script>
+var buttons = $(".emergencyType");
+var ceoProzor = window.screen.height / window.devicePixelRatio;
+var oneSize = ceoProzor * 0.5 / buttons.length;
+
+
+buttons.height(oneSize);
+//buttons.width(oneSize);
+buttons.css('borderRadius', oneSize);
+buttons.css('lineHeight', oneSize + 'px');
+buttons.css('fontSize', oneSize / 5 + 'px');
+</script>
+<style>
+.emergencyType {
+    background-color: #03a9f4;
+    border-width: : 2px;
+    border-color: silver;
+    border-style:solid;
+    text-align: center;
+    vertical-align: middle;
+    width:100%;
+
+}
+
+.value {
+    color: black;
+    font-size:x-large;
+}
+</style>

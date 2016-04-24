@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap_material/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap_material/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mCustomScrollbar.min.css">
+    <title>Emergency Shouter</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="steps">
+            <i id="compass" class="fa fa-compass fa-lg" aria-hidden="true" data-toggle="modal" data-target="#myModal"></i>
+            <div id='cssmenu'>
+                <ul>
+                    <li><a id="homeLink" href='#'>Home</a></li>
+                    <li><a id="settingsLink" href='#'>Settings</a></li>
+                    <li><a id="dashBoardLink" href='#'>Dashboard</a></li>
+                    <li><a id="loginLink" href='#'>Login</a></li>
+                    <li><a id="chatLink" href='#'>Chat</a></li>
+                </ul>
+            </div>
+            <div id="content">
+            </div>
+            <div id="map"></div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body text-center">
+      <div id="compassContent" >
+
+      </div>
+      </div>
+      <div class="modal-footer">
+
+        <button id="closeCompass"type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--<a href="darko.html">Link</a> -->
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="js/jquery/fastclick.js"></script>
+    <script type="text/javascript" src="js/components/dashboard.js"></script>
+    <script type="text/javascript" src="js/components/home.js"></script>
+    <script type="text/javascript" src="js/components/setup.js"></script>
+    <script type="text/javascript" src="js/components/login.js"></script>
+    <script type="text/javascript" src="js/components/compass.js"></script>
+    <script type="text/javascript" src="js/socket.io.js"></script>
+    <script type="text/javascript" src="js/components/chat.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="js/index2.js"></script>
+    <script type="text/javascript" src="js/jquery/menuPlugin.js"></script>
+</body>
+<style>
+#wrap {
+    position: absolute;
+    width: 100%;
+    overflow-y: hidden;
+    top: 0;
+    bottom: 0;
+}
+
+.step {
+    position: relative;
+    /*height: 500px;*/
+    /*margin-bottom: 500px;
+*/
+}
+#compass{
+    position: absolute;
+    left:50%;
+    top:2%;
+    font-size:25px;
+    z-index:50;
+}
+#myModal{
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+#closeCompass{
+
+}
+.modal-footer{
+    text-align: center;
+}
+
+</style>
+
+</html>
