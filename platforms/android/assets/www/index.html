@@ -39,6 +39,11 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/mCustomScrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/emergency_list.css">
+    <link rel="stylesheet" type="text/css" href="css/setup.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <title>Emergency Shouter</title>
 </head>
 
@@ -46,7 +51,7 @@
     <div id="wrap">
         <div id="steps">
             <i id="compass" class="fa fa-compass fa-lg" aria-hidden="true" data-toggle="modal" data-target="#myModal"></i>
-            <div id='cssmenu'>
+            <div id='cssmenu' class='app_main_menu'>
                 <ul>
                     <li><a id="homeLink" href='#'>Home</a></li>
                     <li><a id="settingsLink" href='#'>Settings</a></li>
@@ -83,16 +88,15 @@
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="js/jquery/mCustomScrollbar.concat.min.js"></script>
     <script type="text/javascript" src="js/jquery/fastclick.js"></script>
-    <script type="text/javascript" src="dashboard.js"></script>
-    <script type="text/javascript" src="home.js"></script>
-    <script type="text/javascript" src="setup.js"></script>
-    <script type="text/javascript" src="login.js"></script>
-    <script type="text/javascript" src="compass.js"></script>
+    <script type="text/javascript" src="js/components/dashboard.js"></script>
+    <script type="text/javascript" src="js/components/home.js"></script>
+    <script type="text/javascript" src="js/components/setup.js"></script>
+    <script type="text/javascript" src="js/components/login.js"></script>
+    <script type="text/javascript" src="js/components/compass.js"></script>
     <script type="text/javascript" src="js/socket.io.js"></script>
-    <script type="text/javascript" src="js/client_side.js"></script>
-    <script type="text/javascript" src="chat.js"></script>
+    <script type="text/javascript" src="js/components/chat.js"></script>
     <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
     <script type="text/javascript" src="js/index2.js"></script>
     <script type="text/javascript" src="js/jquery/menuPlugin.js"></script>
@@ -111,23 +115,6 @@
     /*height: 500px;*/
     /*margin-bottom: 500px;
 */
-}
-#compass{
-    position: absolute;
-    left:50%;
-    top:2%;
-    font-size:25px;
-    z-index:50;
-}
-#myModal{
-    opacity: 0.6;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
-}
-#closeCompass{
-
-}
-.modal-footer{
-    text-align: center;
 }
 
 </style>

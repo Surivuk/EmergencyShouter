@@ -10,7 +10,7 @@ var app = (function(global) {
     var _login = {};
     var _compass = {};
     var _chat = {};
-    //var _channel = {};
+
 
     //state of the view (what is user seeing in any given moment)
     var state = 0;
@@ -145,7 +145,7 @@ var app = (function(global) {
         _setup = new setup();
         _login = new login();
         _compass = new compass();
-        //_channel = new channel(release);
+
         _chat = new chat(release);
 
         eventBind();

@@ -1,0 +1,31 @@
+#settingsView{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url('../img/bg2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.panel.panel-info>.panel-heading{
+  background-color: #3E606F;
+  color: #FCFFF5;
+}
+
+.panel.panel-info{
+  background-color: #FCFFF5;
+}
+
+.message{
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size:x-small;
+}
+
+.jumbotron{
+  position: relative;
+  left: 5%;
+  width: 90%;
+  background-color: transparent;
+}

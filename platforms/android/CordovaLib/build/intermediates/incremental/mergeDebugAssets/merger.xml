@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Darko\Documents\GitHub\Hybrid\platforms\android\CordovaLib\assets"/></dataSet><dataSet config="debug"><source path="C:\Users\Darko\Documents\GitHub\Hybrid\platforms\android\CordovaLib\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Volumes/Disk 3/Cordova/hello/EmergencyShouter/platforms/android/CordovaLib/assets"/></dataSet><dataSet config="debug"><source path="/Volumes/Disk 3/Cordova/hello/EmergencyShouter/platforms/android/CordovaLib/src/debug/assets"/></dataSet></merger>

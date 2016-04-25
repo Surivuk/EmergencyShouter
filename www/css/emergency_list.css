@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Capture;
+    src: url('../fonts/Capture_it.ttf');
+}
+
+#emergency_list_View{
+  height: 100%;
+  width: 100%;
+}
+
+
+.emergency_container{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url('../img/bg2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.emergency_list_tag{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  top: 5%;
+  left: 0px;
+}
+
+.emergency_list_tag li{
+  width: 100%;
+  height: 16.66%;
+  display: block;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.emergency_list_tag li p{
+  color: #D1DBBD;
+  padding-top: 8%; 
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  
+}
+
+.one_line{
+  /*border-top: solid 1px rgba(0, 0, 0, 0.2);
+  border-right: solid 1px rgba(0, 0, 0, 0.2);*/
+  /*float:left;*/
+  background-color: #193441;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.other_line{
+  /*border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  border-left: solid 1px rgba(0, 0, 0, 0.2);*/
+  /*float:right;*/
+  background-color: #3E606F;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+

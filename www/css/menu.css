@@ -1,0 +1,66 @@
+#cssmenu{
+  background-color: #FCFFF5; /* D1DBBD */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 8%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  border-bottom: solid 1px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+#menu-line{
+
+}
+
+#cssmenu #menu-button{
+	padding: 18px;
+}
+
+
+.app_main_menu ul{
+	background-color: #FCFFF5;
+}
+
+#content{
+	position: absolute;
+	left: 0px;
+	top: 8%;
+	height: 93%;
+	width: 100%;
+}
+
+#compass{
+    position: absolute;
+    left:50%;
+    top: 2.8%;
+    margin-left: -12px;
+    font-size:24px;
+    z-index:50;
+}
+#myModal{
+    /*opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#closeCompass{
+
+}
+.modal-footer{
+    text-align: center;
+}
+
+.modal-dialog{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 50%;
+}
+
+#canvas{
+	width: 220px;
+	height: 250px;
+}
